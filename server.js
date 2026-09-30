@@ -27,10 +27,10 @@ app.put("/alunos/:id", async (req, res) => {
 
 app.delete("/alunos/:id", async (req, res) =>{
     const {id} = req.params;
-    const alunoDeletado = await pool.query('DELETE FROM alunos WHERE  id=$1', [id]);
+    const alunoDeletado = await pool.query('DELETE FROM alunos WHERE id=$1', [id]);
     res.json(alunoDeletado.rows[0]);
 });
 
 app.listen(3000, () =>{
-    console.log("servidor round round round")
+    console.log("servidor round, round, round, ...")
 });
